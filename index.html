@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second JavaScript Project - Linear HAX</title>
+  </head>
+
+  <body>
+    <script>
+      let colorIndex = [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
+      function ChangeBG() {
+        let code1 = "";
+        let code2 = "";
+        let code3 = "";
+        let code4 = "";
+        for (let i = 1; i <= 6; i++) {
+          code1 += colorIndex[Math.floor(Math.random() * colorIndex.length)];
+          code2 += colorIndex[Math.floor(Math.random() * colorIndex.length)];
+          code3 += colorIndex[Math.floor(Math.random() * colorIndex.length)];
+          code4 += colorIndex[Math.floor(Math.random() * colorIndex.length)];
+        }
+        document.body.style.background =
+          "linear-gradient(to right, #" +
+          code1 +
+          ", #" +
+          code2 +
+          ", #" +
+          code3 +
+          ", #" +
+          code4 +
+          ")";
+      }
+      setInterval(ChangeBG, 1000);
+    </script>
+  </body>
+</html>
